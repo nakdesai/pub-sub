@@ -51,6 +51,7 @@ Get (get the next new message for topic topic_name for subscriber subscriber_nam
 ## Run the pub-sub server
 
    $ pub-sub --help
+   
    Usage of pub-sub:
    -ip string
     	 ip address (default "127.0.0.1")
