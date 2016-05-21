@@ -1,7 +1,7 @@
-# pub-sub
+## pub-sub
 A simple http based pub-sub that allows clients to publish messages to topics, subscribe/unsubscribe to topics and poll for new messages for a topic.
 
-# HTTP Endpoints
+## HTTP Endpoints
 Subscribe (subscribe to topic topic_name with username subscriber_name):
     POST /{topic_name}/{subscriber_name}
     
@@ -32,18 +32,24 @@ Get (get the next new message for topic topic_name for subscriber subscriber_nam
                 "message": <message string>,
                 "published": <time stamp>
             }
-# Install
+## Install Pub-Sub
+
+# Install the server
+
   $ go get github.com/nakdesai/pub-sub
   
-  publisher client
+# Install publisher client
   
   $ go install github.com/nakdesai/pub-sub/client_pub
   
-  subscriber client
+# Install subscriber client
   
   $ go install github.com/nakdesai/pub-sub/client_sub
             
-# Usage
+## Usage
+
+# Run the pub-sub server
+
    $ pub-sub --help
    Usage of pub-sub:
    -ip string
@@ -54,7 +60,8 @@ Get (get the next new message for topic topic_name for subscriber subscriber_nam
    Example: 
        pub-sub -port=6000 (will start server listening on port 6000 on localhost)
        
-# Helper Clients
+# Run the Helper Clients
+
   These are helper clients that simluate publishers and subscribers
   
   publisher client:
