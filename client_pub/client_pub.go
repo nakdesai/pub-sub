@@ -26,7 +26,7 @@
 
     To run :
 
-    $ ./client_pub -port=6000 -topic=jobs -message=doctor -interval=800 -num=5
+    $ client_pub -port=6000 -topic=jobs -message=doctor -interval=800 -num=5
 
     By default it publishes to port 3000 and the default max interval between successive messages is 500 ms
 

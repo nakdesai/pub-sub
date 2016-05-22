@@ -16,7 +16,9 @@
 
 
    The pubsubScalable package provides a library for a simple pub-sub mechanism to subscribe to
-   topics as well as publish messages to and pull messages from topics.
+   topics as well as publish messages to and pull messages from topics. The library spawns a fixed
+   number of goroutines (topic managers) and and each goroutine is responsible to manager a part of
+   the topic key space (topic name is hashed to determine the topic manager)
 
 */
 
@@ -79,7 +81,7 @@ const (
 )
 
 // the length of the request queue
-const REQUEST_QUEUE_SIZE int = 50
+const REQUEST_QUEUE_SIZE int = 100
 
 // Instantiate a new PubSub
 func NewPubSub(maxOutStandingMsgs int) *PubSub {

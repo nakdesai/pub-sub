@@ -17,15 +17,15 @@
 
    An HTTP based PubSub server
 
-   $ ./main -h
-   Usage of ./main:
+   $ pubsub -h
+   Usage of pubsub:
    -ip string
     	ip address (default "127.0.0.1")
    -port int
     	server port to listen on (default 3000)
 
     Example:
-    $ ./main -port=6000
+    $ pubsub -port=6000
 
 */
 
@@ -45,7 +45,7 @@ import (
 )
 
 // Maximum number of outstanding messages not pulled by the subscriber
-const MAX_OUTSTANDING_MESSAGES int = 20
+const MAX_OUTSTANDING_MESSAGES int = 50
 
 type PubSubInterface interface {
 	Subscribe(topicName, subscriberName string)

@@ -1,6 +1,0 @@
-{
-	"ImportPath": "github.com/nakdesai/pub-sub/pubsub",
-	"GoVersion": "go1.6",
-	"GodepVersion": "v70",
-	"Deps": []
-}
